@@ -1,13 +1,19 @@
+export const dynamic = "force-dynamic"
+export const dynamicParams = true;
+
 import React from 'react'
 import Link from 'next/link'
 import connectDB from '@/db/connectDB';
 import Blog from '@/models/Blog';
 import { deleteBlog } from '@/actions/deleteBlog';
-import DeleteButton from '@/components/DeleteButton';
+import DeleteButton from '@/components/DeleteButton'
 
 
-const readmore = async ({ params }) => {
-    const id = params.id;
+
+
+export default async function readmore({params}){
+    const resolvedParams = await params;
+    const {id} = resolvedParams
     console.log("ID", id)
     await connectDB()
     // Fetching BlogData from MongoDB
@@ -42,4 +48,4 @@ const readmore = async ({ params }) => {
     )
 }
 
-export default readmore
+// export default readmore
