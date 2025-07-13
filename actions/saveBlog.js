@@ -11,4 +11,5 @@ export async function saveBlog(formData) {
         await connectDB();
         const data = await Blog.create({ name, title, content })
         console.log("BlogData", data)
+        return { success: true, message: "Blog saved!" };
 }
