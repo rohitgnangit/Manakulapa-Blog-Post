@@ -28,12 +28,12 @@ export default async function readmore({ params }) {
         <>
             {!blogData ? <p className='text-center py-50 text-red-700'>There is no blog or this Blog is deleted</p> :
                 <div className="py-30">
-                    <div className="container mx-auto flex flex-col justify-center items-center bg-slate-300 w-[85%] md:w-[70%] rounded-lg p-5">
+                    <div className="container mx-auto flex flex-col justify-center items-center bg-slate-300 w-[95%] md:w-[70%] rounded-lg p-5">
                         <div className=" items-center w-full">
                             <h4 className='text-sm font-bold'>Q : {blogData.name}</h4>
                             <h2 className="text-2xl font-bold text-center py-2"><span className="font-bold underline">Approach : </span>{blogData.title}</h2>
                         </div>
-                        <div className="flex flex-col justify-center items-center">
+                        <div className=" w-full overflow-x-auto max-w-full my-2 rounded-lg">
                             <SyntaxHighlighter language="java" style={oneDark}>
                                 {blogData.content}
                             </SyntaxHighlighter>
