@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const Navbar = () => {
   return (
-    <nav className='h-15 flex justify-between items-center bg-purple-800 text-white '>
+    <nav className='h-15 flex justify-between items-center bg-cyan-800 text-white '>
       <Link href={"/"}>
         <h1 className='pl-3 text-2xl font-bold'>SaveCode</h1>
       </Link>

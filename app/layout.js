@@ -24,6 +24,7 @@ export default function RootLayout({ children }) {
       <body
         className="absolute top-0 z-[-2] h-screen w-screen transform bg-white bg-[radial-gradient(80%_160%_at_50%_50%,hsla(0,0%,100%,0)_0,rgba(252,205,238,.5)_100%)]"
       >
+        
         <Navbar/>
         <div className="min-h-[83.7%]">
         {children}
